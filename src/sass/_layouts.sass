@@ -1,0 +1,55 @@
+main
+  margin: 0 4vw
+section
+  padding-top: 7rem
+  &:not(:first-child)
+    margin-top: 7rem
+    border-top: 1px solid $color-gray-light
+.container
+  max-width: 1200px
+
+// about
+.l-about
+  &__content
+    display: flex
+    align-items: center
+
+// footer
+.l-footer
+  margin-top: 7rem
+  &__contact
+    padding: 3rem 4vw
+    background-color: $color-primary
+  &__logo-wrap
+    max-width: 100px
+    margin: 0 auto
+  &__nav
+    padding: 2rem 4vw
+  &__copyright
+    margin-left: auto
+    color: $color-gray-mid
+
+@media (max-width: 767.98px)
+  section
+    padding-top: 5rem
+    &:not(:first-child)
+      margin-top: 5rem
+
+  .l-about
+    &__content
+      padding: 2rem
+      padding-bottom: 0
+
+  .l-pickup
+    &__box
+      margin-top: -2rem
+    &__wrap
+      margin-top: 2rem
+
+@media (max-width: 575.98px)
+  section
+    padding-top: 10vw
+    &:not(:first-child)
+      margin-top: 10vw
+  .l-footer
+    margin-top: 12vw
