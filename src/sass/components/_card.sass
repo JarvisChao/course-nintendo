@@ -14,9 +14,8 @@
     padding: 1rem 0
     border-bottom: 1px solid $color-gray-light
   &__img-mask, &__title
-    transition: 0.3s
+    transition: color 0.3s, opacity 0.3s
   &__title
-    font-size: 1.7rem
     padding-left: 1rem
     margin-bottom: 1rem
     border-left: 4px solid $color-primary
@@ -28,12 +27,6 @@
     margin: 1.5rem 0
   &__rating-img
     +size(auto, 100%)
-
-    &:not(:first-child)
-      margin-left: auto
   &__date
     display: flex
     align-items: flex-end
-  &__arrow
-    margin-left: auto
-    color: $color-primary

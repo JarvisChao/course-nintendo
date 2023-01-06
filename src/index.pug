@@ -8,6 +8,14 @@ html(lang="en")
     //- 教學用網站，因此設置此 meta 防止瀏覽器索引
     meta(name="robots" content="noindex, nofollow")
 
+    //- 防止 Iphone 自訂偵測電話，影響樣式
+    meta(name="format-detection" content="telephone=no")
+    meta(http-equiv="x-rim-auto-match" content="none")
+
+    //- 網頁 icon
+    link(rel="shortcut icon", href="img/logo/logo-icon.png", type="image/png")
+    link(rel="apple-touch-icon", href="img/logo/logo-icon.png")
+
     link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css")
     link(rel="stylesheet" href="css/style.min.css")
@@ -17,11 +25,11 @@ html(lang="en")
   body
     nav.navbar.navbar-expand-lg.navbar-dark.l-navbar
       .container-fluid
-        a.navbar-brand.l-navbar__brand(href='#') Nintendo
-        button.navbar-toggler.l-navbar__toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        a.navbar-brand.u-text-lg(href='#') Nintendo
+        button.navbar-toggler.u-text-lg(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.l-navbar__btn-box
+          ul.navbar-nav.u-ml-auto
             li.nav-item
               a.nav-link(aria-current='page' href='#about') 簡介 ABOUT
             li.nav-item
@@ -47,11 +55,9 @@ html(lang="en")
     main.l-main
       section#about.l-about
         .container
-          .row
-            .col-md-12
-              .o-title
-                h2.o-title__zh 簡介
-                h2.o-title__en ABOUT
+          .o-title
+            h2.o-title__text 簡介
+            h2.u-text-xs.u-color-gray-mid ABOUT
           .row
             .col-md-6.order-md-1.order-2
               .l-about__content
@@ -65,11 +71,9 @@ html(lang="en")
 
       section#pickup.l-pickup
         .container
-          .row
-            .col-md-12
-              .o-title
-                h2.o-title__zh 精選
-                h2.o-title__en PICKUP
+          .o-title
+            h2.o-title__text 精選
+            h2.u-text-xs.u-color-gray-mid PICKUP
 
           .row.l-pickup__box
             article.col-md-4.col-sm-6.l-pickup__wrap
@@ -77,19 +81,19 @@ html(lang="en")
                 .c-card__img-mask
                   img(src="https://www.nintendo.tw/software/img/bnr/tokyo_mirage_sessions_fe_encore_tc.jpg", alt="幻影異聞錄♯FE Encore")
                 .c-card__content
-                  h3.c-card__title 幻影異聞錄♯FE Encore
+                  h3.u-text-md.c-card__title 幻影異聞錄♯FE Encore
                   .c-card__desc
-                    span.u-text-small.u-color-primary 盒装版早期購買特典「票夾和文件夾」
-                    span.u-text-small.u-color-gray ※數量有限，送完即止。
+                    span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
+                    span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
                       img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_12plus.svg" alt="分級")
-                      img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
+                      img.c-card__rating-img.u-ml-auto(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
                     .c-card__date
                       div
-                        span.u-text-small 2020.1.17
-                        span.u-text-small.u-color-gray 盒裝版
-                      i.fas.fa-arrow-circle-right.c-card__arrow
+                        span.u-text-xs 2020.1.17
+                        span.u-text-xs.u-color-gray-mid 盒裝版
+                      i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
 
 
             article.col-md-4.col-sm-6.l-pickup__wrap
@@ -97,40 +101,40 @@ html(lang="en")
                 .c-card__img-mask
                   img(src="https://www.nintendo.tw/software/img/bnr/pokemon_mystery_dungeon_rescue_team_dx.jpg", alt="ポケモン不思議のダンジョン 救助隊DX")
                 .c-card__content
-                  h3.c-card__title ポケモン不思議のダンジョン 救助隊DX
+                  h3.u-text-md.c-card__title ポケモン不思議のダンジョン 救助隊DX
                   .c-card__desc
-                    span.u-text-small.u-color-primary 盒装版早期購買特典「票夾和文件夾」
-                    span.u-text-small.u-color-gray ※數量有限，送完即止。
+                    span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
+                    span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
                       img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
                     .c-card__date
                       div
-                        span.u-text-small 2020.1.17
-                        span.u-text-small.u-color-gray 盒裝版
-                      i.fas.fa-arrow-circle-right.c-card__arrow
+                        span.u-text-xs 2020.1.17
+                        span.u-text-xs.u-color-gray-mid 盒裝版
+                      i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
             article.col-md-4.col-sm-6.l-pickup__wrap
               a.c-card(href="##")
                 .c-card__img-mask
                   img(src="https://www.nintendo.tw/software/img/bnr/animal_crossing.jpg", alt="集合啦！動物森友會")
                 .c-card__content
-                  h3.c-card__title 集合啦！動物森友會
+                  h3.u-text-md.c-card__title 集合啦！動物森友會
                   .c-card__desc
-                    span.u-text-small.u-color-primary 盒装版早期購買特典「票夾和文件夾」
-                    span.u-text-small.u-color-gray ※數量有限，送完即止。
+                    span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
+                    span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
                       img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
-                      img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
+                      img.c-card__rating-img.u-ml-auto(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
                     .c-card__date
                       div
-                        span.u-text-small 2020.1.17
-                        span.u-text-small.u-color-gray 盒裝版
-                      i.fas.fa-arrow-circle-right.c-card__arrow
+                        span.u-text-xs 2020.1.17
+                        span.u-text-xs.u-color-gray-mid 盒裝版
+                      i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
 
-            .col-md-12
+            .col-12
               .o-btn
-                a.o-btn__wrap(href="##")
+                a.o-btn__link(href="##")
                   i.fas.fa-arrow-circle-right.o-btn__arrow
                   span.o-btn__text PICKUP一覽
 
@@ -147,6 +151,6 @@ html(lang="en")
             a.nav-link(href='#pickup') 精選 PICKUP
           li.nav-item
             a.nav-link(href='#contact') 聯繫 CONTACT
-        span.l-footer__copyright.u-text-small © Nintendo (Hong Kong) Ltd.Games are properties of their respective owners.
+        span.u-text-xs.u-color-gray-mid.u-ml-auto © Nintendo Ltd.Games are properties of their respective owners.
 
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js")

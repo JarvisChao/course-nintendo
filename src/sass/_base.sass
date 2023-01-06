@@ -28,11 +28,45 @@ body
   letter-spacing: 1.2px
   color: $color-gray
 
+/* ----------------------------------- */
+/* ------ Resets ------ */
+/* ----------------------------------- */
 a
-  display: block
+  display: inline-block
   text-decoration: none
   color: inherit
   &:hover
     color: inherit
 img
   max-width: 100%
+
+h1, h2, h3, h4, p
+  margin: 0
+span
+  display: block
+
+
+/* ----------------------------------- */
+/* ------ Layouts ------ */
+/* ----------------------------------- */
+main
+  margin: 0 4vw
+
+section
+  padding-top: 7rem
+  &:not(:first-child)
+    margin-top: 7rem
+    border-top: 1px solid $color-gray-light
+
+  @media (max-width: 767.98px)
+    padding-top: 5rem
+    &:not(:first-child)
+      margin-top: 5rem
+
+  @media (max-width: 575.98px)
+    padding-top: 10vw
+    &:not(:first-child)
+      margin-top: 10vw
+
+.container
+  max-width: 1200px
