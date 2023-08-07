@@ -7,7 +7,7 @@
       opacity: 0.8
     &__title
       color: var(--color-primary)
-  &__content
+  &__body
     display: flex
     flex-direction: column
     height: 100%
@@ -23,10 +23,11 @@
     margin-top: auto
   &__rating
     display: flex
+    justify-content: space-between
     height: 3rem
-    margin: 1.5rem 0
-  &__rating-img
-    +size(auto, 100%)
+    margin: 2rem 0 1rem
+    img
+      +size(auto, 100%)
   &__date
     display: flex
     align-items: flex-end

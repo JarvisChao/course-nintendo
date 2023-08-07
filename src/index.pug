@@ -55,10 +55,10 @@ html(lang="en")
     main.l-main
       section#about.l-about
         .container
-          .o-title
-            h2.o-title__text 簡介
-            h2.u-ff-en.u-text-xs.u-color-gray-mid ABOUT
-          .row
+          .o-title.--center
+            h2.u-title.o-title__content 簡介
+              span.u-ff-en.u-text-xs.u-color-gray-mid.o-title__en ABOUT
+          .row.--gy-30
             .col-md-6.order-md-1.order-2
               .l-about__content
                 p 任天堂創立於1889年，是日本的電視遊戲製造商。
@@ -71,24 +71,24 @@ html(lang="en")
 
       section#pickup.l-pickup
         .container
-          .o-title
-            h2.o-title__text 精選
-            h2.u-ff-en.u-text-xs.u-color-gray-mid PICKUP
+          .o-title.--center
+            h2.u-title.o-title__content 精選
+              span.u-ff-en.u-text-xs.u-color-gray-mid.o-title__en PICKUP
 
           .row.l-pickup__box
             article.col-md-4.col-sm-6.l-pickup__wrap
               a.c-card(href="##")
                 .c-card__img-mask
                   img(src="https://www.nintendo.tw/software/img/bnr/tokyo_mirage_sessions_fe_encore_tc.jpg", alt="幻影異聞錄♯FE Encore")
-                .c-card__content
+                .c-card__body
                   h3.u-text-md.c-card__title 幻影異聞錄♯FE Encore
                   .c-card__desc
                     span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
                     span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
-                      img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_12plus.svg" alt="分級")
-                      img.c-card__rating-img.u-ml-auto(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
+                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_12plus.svg" alt="分級")
+                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
                     .c-card__date
                       div
                         span.u-text-xs 2020.1.17
@@ -100,14 +100,14 @@ html(lang="en")
               a.c-card(href="##")
                 .c-card__img-mask
                   img(src="https://www.nintendo.tw/software/img/bnr/pokemon_mystery_dungeon_rescue_team_dx.jpg", alt="ポケモン不思議のダンジョン 救助隊DX")
-                .c-card__content
+                .c-card__body
                   h3.u-text-md.c-card__title ポケモン不思議のダンジョン 救助隊DX
                   .c-card__desc
-                    span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
-                    span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
+                    //- span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
+                    //- span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
-                      img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
+                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
                     .c-card__date
                       div
                         span.u-text-xs 2020.1.17
@@ -117,15 +117,15 @@ html(lang="en")
               a.c-card(href="##")
                 .c-card__img-mask
                   img(src="https://www.nintendo.tw/software/img/bnr/animal_crossing.jpg", alt="集合啦！動物森友會")
-                .c-card__content
+                .c-card__body
                   h3.u-text-md.c-card__title 集合啦！動物森友會
                   .c-card__desc
                     span.u-text-xs.u-color-primary 盒装版早期購買特典「票夾和文件夾」
                     span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
-                      img.c-card__rating-img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
-                      img.c-card__rating-img.u-ml-auto(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
+                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
+                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
                     .c-card__date
                       div
                         span.u-text-xs 2020.1.17
@@ -133,9 +133,9 @@ html(lang="en")
                       i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
 
             .col-12
-              .o-btn
+              .o-btn.--center.u-mt-40
                 a.o-btn__link(href="##")
-                  i.fas.fa-arrow-circle-right.o-btn__arrow
+                  i.fas.fa-arrow-circle-right.o-btn__icon
                   span.o-btn__text PICKUP一覽
 
     footer.l-footer

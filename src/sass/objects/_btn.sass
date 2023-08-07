@@ -1,7 +1,7 @@
 .o-btn
-  display: flex
-  justify-content: center
-  margin-top: 4rem
+  &.--center
+    display: flex
+    justify-content: center
   &__link
     display: flex
     align-items: center
@@ -13,5 +13,5 @@
     &:hover
       background-color: transparent
       color: var(--color-primary)
-  &__arrow
-    margin-right: 0.5rem
+  &__icon
+    margin-right: var(--space-5)

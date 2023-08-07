@@ -1,11 +1,14 @@
 .o-title
-  margin-bottom: 4rem
-  text-align: center
-  &__text
-    font-size: 3rem
-    &::after
-      content: ''
-      display: block
-      +size(1.4rem, 0.3rem)
-      margin: 0.8rem auto
-      background-color: var(--color-primary)
+  margin-bottom: var(--space-40)
+  &.--center
+    display: flex
+    justify-content: center
+  &__content
+    display: inline-block
+    text-align: center
+  &__en::before
+    content: ''
+    display: block
+    +size(1.4rem, 0.3rem)
+    margin: 0.8rem auto
+    background-color: var(--color-primary)
