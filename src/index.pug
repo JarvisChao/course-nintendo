@@ -13,11 +13,11 @@ html(lang="en")
     meta(http-equiv="x-rim-auto-match" content="none")
 
     //- 網頁 icon
-    link(rel="shortcut icon", href="img/logo/logo-icon.png", type="image/png")
-    link(rel="apple-touch-icon", href="img/logo/logo-icon.png")
+    link(rel="shortcut icon", href="img/logo/favicon.png", type="image/png")
+    link(rel="apple-touch-icon", href="img/logo/favicon.png")
 
-    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer")
     link(rel="stylesheet" href="css/style.min.css")
 
     title Bootstrap 基礎應用（Project4） - 簡化版任天堂網站
@@ -25,31 +25,32 @@ html(lang="en")
   body
     nav.navbar.navbar-expand-lg.navbar-dark.l-navbar
       .container-fluid
-        a.navbar-brand.u-text-lg(href='#') Nintendo
-        button.navbar-toggler.u-text-lg(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        a.l-navbar__logo-mask(href="#")
+          img(src="img/logo/logo.svg" alt="任天堂 Logo")
+        button.navbar-toggler.u-text-lg(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
           ul.navbar-nav.u-ml-auto
             li.nav-item
-              a.nav-link(aria-current='page' href='#about') 簡介 ABOUT
+              a.nav-link(aria-current="page" href="#about") 簡介 ABOUT
             li.nav-item
-              a.nav-link(href='#pickup') 精選 PICKUP
+              a.nav-link(href="#topics") 最新話題 TOPICS
             li.nav-item
-              a.nav-link(href='#contact') 聯繫 CONTACT
+              a.nav-link(href="#contact") 聯繫 CONTACT
     header.l-header
-      #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+      #carouselExampleControls.carousel.slide(data-bs-ride="carousel")
         .carousel-inner
           .carousel-item.active
-            img.d-block.w-100(src='https://www.nintendo.tw/top/img/mario35th_210112_l_tw.jpg' alt='任天堂')
+            img.d-block.w-100(src="img/banner/banner-splatoon3.webp" alt="任天堂 斯普拉遁")
           .carousel-item
-            img.d-block.w-100(src='https://www.nintendo.tw/top/img/Sitetop_PC_1440x520.png' alt='任天堂')
+            img.d-block.w-100(src="img/banner/banner-pikmin.webp" alt="任天堂 皮克敏")
           .carousel-item
-            img.d-block.w-100(src='https://www.nintendo.tw/top/img/2020_winter_top_banner_l_tw.png' alt='任天堂')
-        button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
-          span.carousel-control-prev-icon(aria-hidden='true')
+            img.d-block.w-100(src="img/banner/banner-zelda.webp" alt="任天堂 薩爾達傳說")
+        button.carousel-control-prev(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
           span.visually-hidden Previous
-        button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
-          span.carousel-control-next-icon(aria-hidden='true')
+        button.carousel-control-next(type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
           span.visually-hidden Next
 
     main.l-main
@@ -58,7 +59,7 @@ html(lang="en")
           .o-title.--center
             h2.u-title.o-title__content 簡介
               span.u-ff-en.u-text-xs.u-color-gray-mid.o-title__en ABOUT
-          .row.--gy-30
+          .row.--gy
             .col-md-6.order-md-1.order-2
               .l-about__content
                 p 任天堂創立於1889年，是日本的電視遊戲製造商。
@@ -66,20 +67,20 @@ html(lang="en")
                   | 擁有SUPER MARIO、DONKEY KONG、THE LEGEND OF ZELDA等多款知名的遊戲，至今已在全球售出了超過4億6千萬台的硬體、以及27億套軟體。
             .col-md-6.order-md-2.order-1
               .l-about__img-mask
-                img(src="https://www.nintendo.tw/topics/images/thumbs/a_thumb_switch_l.jpg", alt="任天堂")
+                img(src="img/about/about.jpg", alt="任天堂")
 
 
-      section#pickup.l-pickup
+      section#topics.l-topics
         .container
           .o-title.--center
-            h2.u-title.o-title__content 精選
-              span.u-ff-en.u-text-xs.u-color-gray-mid.o-title__en PICKUP
+            h2.u-title.o-title__content 最新話題
+              span.u-ff-en.u-text-xs.u-color-gray-mid.o-title__en TOPICS
 
-          .row.l-pickup__box
-            article.col-md-4.col-sm-6.l-pickup__wrap
+          .row.--gy
+            article.col-md-4.col-sm-6
               a.c-card(href="##")
                 .c-card__img-mask
-                  img(src="https://www.nintendo.tw/software/img/bnr/tokyo_mirage_sessions_fe_encore_tc.jpg", alt="幻影異聞錄♯FE Encore")
+                  img(src="img/topics/topics-fe-encore.jpg", alt="幻影異聞錄♯FE Encore")
                 .c-card__body
                   h3.u-text-md.c-card__title 幻影異聞錄♯FE Encore
                   .c-card__desc
@@ -87,19 +88,19 @@ html(lang="en")
                     span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
-                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_12plus.svg" alt="分級")
-                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
+                      img(src="img/rating/tw-rating-12plus.svg" alt="分級")
+                      img(src="img/rating/support-cn-tc.svg" alt="語言支援")
                     .c-card__date
                       div
                         span.u-text-xs 2020.1.17
                         span.u-text-xs.u-color-gray-mid 盒裝版
-                      i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
+                      i.fas.fa-arrow-circle-right.u-color-primary
 
 
-            article.col-md-4.col-sm-6.l-pickup__wrap
+            article.col-md-4.col-sm-6
               a.c-card(href="##")
                 .c-card__img-mask
-                  img(src="https://www.nintendo.tw/software/img/bnr/pokemon_mystery_dungeon_rescue_team_dx.jpg", alt="ポケモン不思議のダンジョン 救助隊DX")
+                  img(src="img/topics/topics-pokemon-mystery.jpg", alt="ポケモン不思議のダンジョン 救助隊DX")
                 .c-card__body
                   h3.u-text-md.c-card__title ポケモン不思議のダンジョン 救助隊DX
                   .c-card__desc
@@ -107,16 +108,16 @@ html(lang="en")
                     //- span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
-                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
+                      img(src="img/rating/tw-rating-6plus.svg" alt="分級")
                     .c-card__date
                       div
                         span.u-text-xs 2020.1.17
                         span.u-text-xs.u-color-gray-mid 盒裝版
-                      i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
-            article.col-md-4.col-sm-6.l-pickup__wrap
+                      i.fas.fa-arrow-circle-right.u-color-primary
+            article.col-md-4.col-sm-6
               a.c-card(href="##")
                 .c-card__img-mask
-                  img(src="https://www.nintendo.tw/software/img/bnr/animal_crossing.jpg", alt="集合啦！動物森友會")
+                  img(src="img/topics/topics-animal-crossing.jpg", alt="集合啦！動物森友會")
                 .c-card__body
                   h3.u-text-md.c-card__title 集合啦！動物森友會
                   .c-card__desc
@@ -124,13 +125,13 @@ html(lang="en")
                     span.u-text-xs.u-color-gray-mid ※數量有限，送完即止。
                   .c-card__bottom
                     .c-card__rating
-                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/tw_rating_6plus.svg" alt="分級")
-                      img(src="https://www.nintendo.tw/common/v2_nhl_up/img/software/lang/support_cn_tc.svg" alt="語言支援")
+                      img(src="img/rating/tw-rating-6plus.svg" alt="分級")
+                      img(src="img/rating/support-cn-tc.svg" alt="語言支援")
                     .c-card__date
                       div
                         span.u-text-xs 2020.1.17
                         span.u-text-xs.u-color-gray-mid 盒裝版
-                      i.fas.fa-arrow-circle-right.u-ml-auto.u-color-primary
+                      i.fas.fa-arrow-circle-right.u-color-primary
 
             .col-12
               .o-btn.--center.u-mt-40
@@ -140,17 +141,18 @@ html(lang="en")
 
     footer.l-footer
       #contact.l-footer__contact
-        .l-footer__logo-wrap
-          img.l-footer__logo(src="https://www.nintendo.tw/common/v2_nhl_up/img/ncommon/_common/logo-nintendo.svg")
+        a.l-footer__logo-mask(href="#")
+          img.l-footer__logo(src="img/logo/logo.svg" alt="任天堂 Logo")
+        
 
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light.l-footer__nav
+      nav.navbar.navbar-expand-lg.navbar-light.l-footer__nav
         ul.navbar-nav.l-footer__btn-box
           li.nav-item
-            a.nav-link(aria-current='page' href='#about') 簡介 ABOUT
+            a.nav-link(aria-current="page" href="#about") 簡介 ABOUT
           li.nav-item
-            a.nav-link(href='#pickup') 精選 PICKUP
+            a.nav-link(href="#topics") 最新話題 TOPICS
           li.nav-item
-            a.nav-link(href='#contact') 聯繫 CONTACT
+            a.nav-link(href="#contact") 聯繫 CONTACT
         span.u-text-xs.u-color-gray-mid.u-ml-auto © Nintendo Ltd.Games are properties of their respective owners.
 
-    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous")

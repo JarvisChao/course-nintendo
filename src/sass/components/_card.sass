@@ -11,13 +11,13 @@
     display: flex
     flex-direction: column
     height: 100%
-    padding: 1rem 0
+    padding: var(--space-10) 0
     border-bottom: 1px solid var(--color-gray-light)
   &__img-mask, &__title
     transition: color 0.3s, opacity 0.3s
   &__title
-    padding-left: 1rem
-    margin-bottom: 1rem
+    padding-left: var(--space-10)
+    margin-bottom: var(--space-10)
     border-left: 4px solid var(--color-primary)
   &__bottom
     margin-top: auto
@@ -25,9 +25,10 @@
     display: flex
     justify-content: space-between
     height: 3rem
-    margin: 2rem 0 1rem
+    margin: var(--space-20) 0 var(--space-10)
     img
       +size(auto, 100%)
   &__date
     display: flex
+    justify-content: space-between
     align-items: flex-end
